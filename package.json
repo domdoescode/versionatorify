@@ -1,0 +1,33 @@
+{
+  "name": "versionatorify",
+  "version": "0.0.1",
+  "description": "Browserify transform function for use with versionator static file maps",
+  "license": "BSD",
+  "main": "index.js",
+  "dependencies": {
+    "through": "~2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/domudall/versionatorify.git"
+  },
+  "homepage": "https://github.com/domudall/versionatorify",
+  "keywords": [
+    "coffee-script",
+    "browserify",
+    "v2",
+    "js",
+    "plugin",
+    "transform"
+  ],
+  "author": {
+    "name": "Dom Udall",
+    "email": "udall.dom@gmail.com",
+    "url": "http://domudall.co.uk"
+  },
+  "devDependencies": {
+    "mocha": "~1.18.2",
+    "should": "~3.1.4",
+    "istanbul": "~0.2.6"
+  }
+}
