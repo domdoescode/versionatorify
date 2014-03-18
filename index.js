@@ -4,7 +4,7 @@ function browversionator(staticFileMap) {
   this.staticFileMap = staticFileMap
 
   function compile(file, data, callback) {
-    var versionPathRegex = /versionPath\(\'(.*)\'\)/gm
+    var versionPathRegex = /versionPath\(['"](.*)(['"])\)/gm
       , match = versionPathRegex.exec(data)
 
     while (match !== null) {
@@ -17,7 +17,7 @@ function browversionator(staticFileMap) {
       var escapedMatch = match[0].replace(/([.?*+^$[\]\\(){}|-])/g, '\\$1')
         , instanceRegex = new RegExp(escapedMatch, 'gm')
 
-      data = data.replace(instanceRegex, '\'' + replacement + '\'')
+      data = data.replace(instanceRegex, match[2] + replacement + match[2])
 
       match = versionPathRegex.exec(data)
     }

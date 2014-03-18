@@ -20,6 +20,13 @@ describe('transform()', function () {
     testPrePost(testFile, resultFile, done)
   })
 
+  it('should return double quotes if double quotes are used', function (done) {
+    var testFile = path.join(__dirname, 'fixtures', 'pre', 'double-quotes.jade')
+      , resultFile = path.join(__dirname, 'fixtures', 'post', 'double-quotes.jade')
+
+    testPrePost(testFile, resultFile, done)
+  })
+
   it('should do nothing if no versionPath is found', function (done) {
     var testFile = path.join(__dirname, 'fixtures', 'pre', 'no-version-path.jade')
       , resultFile = path.join(__dirname, 'fixtures', 'post', 'no-version-path.jade')
